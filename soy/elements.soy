@@ -453,7 +453,10 @@
  * Renders the links of Terms of Service and Privacy Policy.
  */
 {template .tosPpLink}
-  {if $ij.tosCallback and $ij.privacyPolicyCallback}
+  {@inject? tosCallback: string}
+  {@inject? privacyPolicyCallback: string}
+
+  {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
     <ul class="firebaseui-tos-list firebaseui-tos">
       <li class="firebaseui-inline-list-item">
         <a href="javascript:void(0)" class="firebaseui-link firebaseui-tos-link" target="_blank">
@@ -475,8 +478,11 @@
  * for phone authentication.
  */
 {template .phoneTosPp}
+  {@inject? tosCallback: string}
+  {@inject? privacyPolicyCallback: string}
+
   <p class="firebaseui-tos firebaseui-phone-tos">
-    {if $ij.tosCallback and $ij.privacyPolicyCallback}
+    {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
       {msg desc="The terms of service and privacy policy for a phone authentication flow. Note that
           'Verify' must match the the label of the 'Verify' button that completes the
           phone number verification flow."}
@@ -504,7 +510,10 @@
  * Renders full Terms of Service and Privacy Policy agreement for the first page.
  */
 {template .fullMessageTosPp}
-  {if $ij.tosCallback and $ij.privacyPolicyCallback}
+  {@inject? tosCallback: string}
+  {@inject? privacyPolicyCallback: string}
+
+  {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
     <p class="firebaseui-tos firebaseui-tospp-full-message">
       {msg desc="The terms of service and privacy policy for the first page."}
         By continuing, you are indicating that you accept our{sp}
@@ -636,12 +645,14 @@
  * The list should match the supported provider IDs in Firebase Auth.
  */
 {template .idpName kind="text"}
+  {@inject? defaultProviderNames: map<string, string>}
   {@param? providerConfig: [providerId:string|null, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
+
   {if $providerConfig.providerName}
     {$providerConfig.providerName}
-  {elseif $ij.defaultProviderNames[$providerConfig.providerId]}
-    {$ij.defaultProviderNames[$providerConfig.providerId]}
+  {elseif isNonnull($defaultProviderNames) and $defaultProviderNames[$providerConfig.providerId]}
+    {$defaultProviderNames[$providerConfig.providerId]}
   {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'saml.') == 0}
     {strSub($providerConfig.providerId, 5)}
   {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
@@ -686,18 +697,20 @@
  * icon.
  */
 {template .idpLogo_ kind="uri"}
+  {@inject? defaultIconUrls: map<string, string>}
   {@param? providerConfig: [providerId:string, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
+
   {if $providerConfig.iconUrl}
     {$providerConfig.iconUrl}
-  {elseif $ij.defaultIconUrls[$providerConfig.providerId]}
-    {$ij.defaultIconUrls[$providerConfig.providerId]}
+  {elseif isNonnull($defaultIconUrls) and $defaultIconUrls[$providerConfig.providerId]}
+    {$defaultIconUrls[$providerConfig.providerId]}
   {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
-    {$ij.defaultIconUrls['saml']}
+    {$defaultIconUrls['saml']}
   {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
-    {$ij.defaultIconUrls['oidc']}
+    {$defaultIconUrls['oidc']}
   {else}
-    {$ij.defaultIconUrls['password']}
+    {$defaultIconUrls['password']}
   {/if}
 {/template}
 
@@ -708,18 +721,20 @@
  * password icon.
  */
 {template .idpColor_ kind="text"}
+  {@inject? defaultButtonColors: map<string, string>}
   {@param? providerConfig: [providerId:string, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
+
   {if $providerConfig.buttonColor}
     {$providerConfig.buttonColor}
-  {elseif $ij.defaultButtonColors[$providerConfig.providerId]}
-    {$ij.defaultButtonColors[$providerConfig.providerId]}
+  {elseif isNonnull($defaultButtonColors) and $defaultButtonColors[$providerConfig.providerId]}
+    {$defaultButtonColors[$providerConfig.providerId]}
   {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
-    {$ij.defaultButtonColors['saml']}
+    {$defaultButtonColors['saml']}
   {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
-    {$ij.defaultButtonColors['oidc']}
+    {$defaultButtonColors['oidc']}
   {else}
-    {$ij.defaultButtonColors['password']}
+    {$defaultButtonColors['password']}
   {/if}
 {/template}
 
