@@ -40,19 +40,27 @@ goog.require('goog.ui.Component');
  */
 firebaseui.auth.ui.element.setValid = function(e, valid) {
   // The parent textfield element, if applicable.
-  var textfield = goog.dom.getAncestorByClass(e, 'firebaseui-textfield');
+  var textfield = goog.dom.getAncestorByClass(e,
+    goog.getCssName('firebaseui-textfield'));
 
   if (valid) {
     goog.dom.classlist.addRemove(
-        e, 'firebaseui-input-invalid', 'firebaseui-input');
+        e,
+        goog.getCssName('firebaseui-input-invalid'),
+        goog.getCssName('firebaseui-input'));
     if (textfield) {
-      goog.dom.classlist.remove(textfield, 'firebaseui-textfield-invalid');
+      goog.dom.classlist.remove(
+        textfield, goog.getCssName('firebaseui-textfield-invalid'));
     }
   } else {
     goog.dom.classlist.addRemove(
-        e, 'firebaseui-input', 'firebaseui-input-invalid');
+        e,
+        goog.getCssName('firebaseui-input'),
+        goog.getCssName('firebaseui-input-invalid'));
     if (textfield) {
-      goog.dom.classlist.add(textfield, 'firebaseui-textfield-invalid');
+      goog.dom.classlist.add(
+        textfield,
+        goog.getCssName('firebaseui-textfield-invalid'));
     }
   }
 };
@@ -166,7 +174,7 @@ firebaseui.auth.ui.element.getInputValue = function(e) {
  * @param {Element} e The element to hide.
  */
 firebaseui.auth.ui.element.hide = function(e) {
-  goog.dom.classlist.add(e, 'firebaseui-hidden');
+  goog.dom.classlist.add(e, goog.getCssName('firebaseui-hidden'));
 };
 
 
@@ -179,7 +187,7 @@ firebaseui.auth.ui.element.show = function(e, opt_text) {
   if (opt_text) {
     goog.dom.setTextContent(e, opt_text);
   }
-  goog.dom.classlist.remove(e, 'firebaseui-hidden');
+  goog.dom.classlist.remove(e, goog.getCssName('firebaseui-hidden'));
 };
 
 
@@ -190,7 +198,7 @@ firebaseui.auth.ui.element.show = function(e, opt_text) {
  * @return {boolean} True if the element is shown.
  */
 firebaseui.auth.ui.element.isShown = function(e) {
-  return !goog.dom.classlist.contains(e, 'firebaseui-hidden') &&
+  return !goog.dom.classlist.contains(e, goog.getCssName('firebaseui-hidden')) &&
       e.style.display != 'none';
 };
 

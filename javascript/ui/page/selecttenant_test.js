@@ -93,7 +93,8 @@ testSuite({
     // Test that the correct tenant ID is passed to the callback on button
     // clicked.
     const tenantButtons =
-        component.getElementsByClass('firebaseui-id-tenant-selection-button');
+        component.getElementsByClass(
+          goog.getCssName('firebaseui-id-tenant-selection-button'));
     events.fireClickSequence(tenantButtons[0]);
     assertEquals('TENANT_ID', selectedTenant);
   },
@@ -102,7 +103,8 @@ testSuite({
     // Test that the correct tenant ID is passed to the callback on enter
     // pressed.
     const tenantButtons =
-        component.getElementsByClass('firebaseui-id-tenant-selection-button');
+        component.getElementsByClass(
+          goog.getCssName('firebaseui-id-tenant-selection-button'));
     events.fireKeySequence(tenantButtons[0], KeyCodes.ENTER);
     assertEquals('TENANT_ID', selectedTenant);
   },
@@ -111,7 +113,8 @@ testSuite({
     // Test that null tenant ID is passed to the callback on button clicked
     // for top-level project.
     const tenantButtons =
-        component.getElementsByClass('firebaseui-id-tenant-selection-button');
+        component.getElementsByClass(
+          goog.getCssName('firebaseui-id-tenant-selection-button'));
     events.fireClickSequence(tenantButtons[1]);
     assertNull(selectedTenant);
   },
@@ -120,7 +123,8 @@ testSuite({
     // Test that null tenant ID is passed to the callback on enter pressed
     // for top-level project.
     const tenantButtons =
-        component.getElementsByClass('firebaseui-id-tenant-selection-button');
+        component.getElementsByClass(
+          goog.getCssName('firebaseui-id-tenant-selection-button'));
     events.fireKeySequence(tenantButtons[1], KeyCodes.ENTER);
     assertNull(selectedTenant);
   },

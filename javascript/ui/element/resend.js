@@ -35,7 +35,7 @@ var element = firebaseui.auth.ui.element;
  * @this {goog.ui.Component}
  */
 element.resend.getResendCountdown = function() {
-  return this.getElementByClass('firebaseui-id-resend-countdown');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-resend-countdown'));
 };
 
 
@@ -44,7 +44,7 @@ element.resend.getResendCountdown = function() {
  * @this {goog.ui.Component}
  */
 element.resend.getResendLink = function() {
-  return this.getElementByClass('firebaseui-id-resend-link');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-resend-link'));
 };
 
 

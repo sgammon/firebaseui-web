@@ -153,7 +153,7 @@ firebaseui.auth.ui.page.PhoneSignInFinish =
    * @return {?Element} The change phone number link.
    */
   getChangePhoneNumberElement() {
-    return this.getElementByClass('firebaseui-id-change-phone-number-link');
+    return this.getElementByClass(goog.getCssName('firebaseui-id-change-phone-number-link'));
   }
 };
 

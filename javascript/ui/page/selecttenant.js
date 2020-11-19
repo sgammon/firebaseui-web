@@ -73,7 +73,7 @@ class SelectTenant extends Base {
    */
   initTenantList_(onClick) {
     const buttons =
-        this.getElementsByClass('firebaseui-id-tenant-selection-button');
+        this.getElementsByClass(goog.getCssName('firebaseui-id-tenant-selection-button'));
     const cb = (tenantId, e) => {
       onClick(tenantId);
     };

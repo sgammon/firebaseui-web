@@ -31,7 +31,7 @@ goog.requireType('goog.ui.Component');
  * @this {goog.ui.Component}
  */
 firebaseui.auth.ui.element.idps.initIdpList = function(onClick) {
-  var buttons = this.getElementsByClass('firebaseui-id-idp-button');
+  var buttons = this.getElementsByClass(goog.getCssName('firebaseui-id-idp-button'));
   var cb = function(providerId, e) {
     onClick(providerId);
   };

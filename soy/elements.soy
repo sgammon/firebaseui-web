@@ -25,7 +25,7 @@
   {@param? disabled: bool} /** Whether the email input is disabled or not. */
   {@param? changeEmail: bool} /** Whether to use change email label. */
   <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
-    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-email-input')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-email-input">
       {if $changeEmail}
         {msg desc="Label of a change email address input field."}Enter new email address{/msg}
       {else}
@@ -64,7 +64,7 @@
     </button>
     <div class="{css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}{sp}
                 {css('firebaseui-textfield')} {css('firebaseui-phone-input-wrapper')}">
-      <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-phone-number-input')}">
+      <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-phone-number-input">
         {msg desc="Label of an phone number input field."}Phone number{/msg}
       </label>
       <input 
@@ -88,7 +88,7 @@
 {template .phoneConfirmationCode}
   <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')}{sp}
               {css('mdl-textfield--floating-label')}">
-    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-phone-confirmation-code-input')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-phone-confirmation-code-input">
       {msg desc="Label of 6-digit SMS verification code."}6-digit code{/msg}
     </label>
     <input 
@@ -329,7 +329,7 @@
 {template .name}
   {@param? name: string} /** The display name to prefill. */
   <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
-    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-name-input')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-name-input">
       {msg desc="Label of a field for setting the user's name."}First &amp; last name{/msg}
     </label>
     <input
@@ -355,7 +355,7 @@
   {@param? label: string} /** The placeholder text in the field, defaulting to "Choose password". */
   <div class="{css('firebaseui-new-password-component')}">
     <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
-      <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-new-password-input')}">
+      <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-new-password-input">
         {if $label}
           {$label}
         {else}
@@ -387,7 +387,7 @@
 {template .password}
   {@param? current: bool} /** Whether to show "Current password" or "Password" label. */
   <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
-    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-password-input')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label')}" for="ui-sign-in-password-input">
       {if $current}
         {msg desc="Label of a password field."}Current password{/msg}
       {else}
@@ -413,7 +413,7 @@
  * Renders the password recovery button.
  */
 {template .passwordRecoveryButton}
-  <a class="{css('firebaseui-link')} {css('firebaseui-id-secondary-link"')} {css('href="javascript:void(0)')}">
+  <a class="{css('firebaseui-link')} {css('firebaseui-id-secondary-link')} {css('href="javascript:void(0)')}">
     {msg desc="Label of the password recovery link"}Trouble signing in?{/msg}
   </a>
 {/template}
@@ -459,12 +459,12 @@
   {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
     <ul class="{css('firebaseui-tos-list')} {css('firebaseui-tos')}">
       <li class="{css('firebaseui-inline-list-item')}">
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link')}" target="_blank">
           {msg desc="Label for the terms of service"}Terms of Service{/msg}
         </a>
       </li>
       <li class="{css('firebaseui-inline-list-item')}">
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link')}" target="_blank">
           {msg desc="Label for the privacy policy"}Privacy Policy{/msg}
         </a>
       </li>
@@ -487,10 +487,10 @@
           'Verify' must match the the label of the 'Verify' button that completes the
           phone number verification flow."}
         By tapping Verify, you are indicating that you accept our{sp}
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link')}" target="_blank">
           Terms of Service
         </a> and{sp}
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link')}" target="_blank">
           Privacy Policy
         </a>
         . An SMS may be sent. Message &amp; data rates may apply.
@@ -517,10 +517,10 @@
     <p class="{css('firebaseui-tos')} {css('firebaseui-tospp-full-message')}">
       {msg desc="The terms of service and privacy policy for the first page."}
         By continuing, you are indicating that you accept our{sp}
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link')}" target="_blank">
           Terms of Service
         </a> and{sp}
-        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link')}" target="_blank">
           Privacy Policy
         </a>.
       {/msg}
@@ -672,21 +672,21 @@
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
   {switch $providerConfig.providerId}
     {case 'google.com'}
-      firebaseui-idp-google
+      {css('firebaseui-idp-google')}
     {case 'github.com'}
-      firebaseui-idp-github
+      {css('firebaseui-idp-github')}
     {case 'facebook.com'}
-      firebaseui-idp-facebook
+      {css('firebaseui-idp-facebook')}
     {case 'twitter.com'}
-      firebaseui-idp-twitter
+      {css('firebaseui-idp-twitter')}
     {case 'phone'}
-      firebaseui-idp-phone
+      {css('firebaseui-idp-phone')}
     {case 'anonymous'}
-      firebaseui-idp-anonymous
+      {css('firebaseui-idp-anonymous')}
     {case 'password'}
-      firebaseui-idp-password
+      {css('firebaseui-idp-password')}
     {default}
-      firebaseui-idp-generic
+      {css('firebaseui-idp-generic')}
   {/switch}
 {/template}
 

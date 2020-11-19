@@ -67,7 +67,7 @@ function testCallback_executePromiseRequest() {
   // Verify that before executing the promise, a progress bar is displayed.
   assertEquals(
       1,
-      goog.dom.getElementsByClass('firebaseui-busy-indicator', root).length);
+      goog.dom.getElementsByClass(goog.getCssName('firebaseui-busy-indicator'), root).length);
   var p = component.executePromiseRequest(
       function() {
         return pending;
@@ -80,14 +80,14 @@ function testCallback_executePromiseRequest() {
   // displayed.
   assertEquals(
       1,
-      goog.dom.getElementsByClass('firebaseui-busy-indicator', root).length);
+      goog.dom.getElementsByClass(goog.getCssName('firebaseui-busy-indicator'), root).length);
   // Resolve pending task.
   resolveBusyIndicator();
   return p.then(function() {
     // Progress bar should still be displayed.
     assertEquals(
         1,
-        goog.dom.getElementsByClass('firebaseui-busy-indicator', root).length);
+        goog.dom.getElementsByClass(goog.getCssName('firebaseui-busy-indicator'), root).length);
   });
 }
 

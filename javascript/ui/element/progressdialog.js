@@ -54,7 +54,12 @@ firebaseui.auth.ui.element.progressDialog.showProgressDialog = function(
  * @enum {string}
  */
 firebaseui.auth.ui.element.progressDialog.State = {
-  LOADING: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active ' +
-      'firebaseui-progress-dialog-loading-icon',
-  DONE: 'firebaseui-icon-done'
+  LOADING: [
+    goog.getCssName('mdl-spinner'),
+    goog.getCssName('mdl-spinner--single-color'),
+    goog.getCssName('mdl-js-spinner'),
+    goog.getCssName('is-active'),
+    goog.getCssName('firebaseui-progress-dialog-loading-icon')
+  ].join(' '),
+  DONE: goog.getCssName('firebaseui-icon-done')
 };

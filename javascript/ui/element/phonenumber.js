@@ -46,7 +46,7 @@ element.phoneNumber.DEFAULT_COUNTRY_ID = '1-US-0';
  * @this {goog.ui.Component}
  */
 element.phoneNumber.getPhoneNumberElement = function() {
-  return this.getElementByClass('firebaseui-id-phone-number');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-phone-number'));
 };
 
 
@@ -56,7 +56,7 @@ element.phoneNumber.getPhoneNumberElement = function() {
  * @private
  */
 element.phoneNumber.getCountrySelectorFlagElement_ = function() {
-  return this.getElementByClass('firebaseui-id-country-selector-flag');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-country-selector-flag'));
 };
 
 
@@ -66,7 +66,7 @@ element.phoneNumber.getCountrySelectorFlagElement_ = function() {
  * @private
  */
 element.phoneNumber.getCountrySelectorCodeElement_ = function() {
-  return this.getElementByClass('firebaseui-id-country-selector-code');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-country-selector-code'));
 };
 
 
@@ -75,7 +75,7 @@ element.phoneNumber.getCountrySelectorCodeElement_ = function() {
  * @this {goog.ui.Component}
  */
 element.phoneNumber.getCountrySelectorElement = function() {
-  return this.getElementByClass('firebaseui-id-country-selector');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-country-selector'));
 };
 
 
@@ -84,7 +84,7 @@ element.phoneNumber.getCountrySelectorElement = function() {
  * @this {goog.ui.Component}
  */
 element.phoneNumber.getPhoneNumberErrorElement = function() {
-  return this.getElementByClass('firebaseui-id-phone-number-error');
+  return this.getElementByClass(goog.getCssName('firebaseui-id-phone-number-error'));
 };
 
 

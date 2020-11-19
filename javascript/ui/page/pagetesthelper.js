@@ -190,22 +190,23 @@ page.PageTestHelper.prototype.testExecutePromiseRequest_ = function() {
       function(error) {});
   this.mockClock.tick(500);
   var elements =
-      goog.dom.getElementsByClass('firebaseui-busy-indicator', root);
+      goog.dom.getElementsByClass(
+        goog.getCssName('firebaseui-busy-indicator'), root);
   assertEquals(1, elements.length);
   var busyIndicator = elements[0];
-  if (goog.dom.classlist.contains(root.firstChild, 'firebaseui-use-spinner')) {
+  if (goog.dom.classlist.contains(root.firstChild, goog.getCssName('firebaseui-use-spinner'))) {
     // Confirm mdl-spinner used instead of mdl-progress.
-    assertTrue(goog.dom.classlist.contains(busyIndicator, 'mdl-spinner'));
+    assertTrue(goog.dom.classlist.contains(busyIndicator, goog.getCssName('mdl-spinner')));
   } else {
     // Confirm mdl-progress bar used instead of mdl-spinner.
-    assertTrue(goog.dom.classlist.contains(busyIndicator, 'mdl-progress'));
+    assertTrue(goog.dom.classlist.contains(busyIndicator, goog.getCssName('mdl-progress')));
   }
   // Resolve pending task.
   resolveBusyIndicator();
   return p.then(function() {
     // Busy indicator should be removed when promise resolves.
     assertEquals(0, goog.dom.getElementsByClass(
-        'firebaseui-busy-indicator', root).length);
+        goog.getCssName('firebaseui-busy-indicator'), root).length);
   });
 };
 });

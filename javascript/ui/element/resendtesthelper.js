@@ -56,18 +56,18 @@ element.ResendTestHelper.prototype.testGetResendLink_ = function() {
 /** @private */
 element.ResendTestHelper.prototype.testHideResendCountdown_ = function() {
   var el = this.component.getResendCountdown();
-  assertEquals(false, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(false, goog.dom.classlist.contains(el, goog.getCssName('firebaseui-hidden')));
   this.component.hideResendCountdown();
-  assertEquals(true, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(true, goog.dom.classlist.contains(el, goog.getCssName('firebaseui-hidden')));
 };
 
 
 /** @private */
 element.ResendTestHelper.prototype.testShowResendLink_ = function() {
   var el = this.component.getResendLink();
-  assertEquals(true, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(true, goog.dom.classlist.contains(el, goog.getCssName('firebaseui-hidden')));
   this.component.showResendLink();
-  assertEquals(false, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(false, goog.dom.classlist.contains(el, goog.getCssName('firebaseui-hidden')));
 };
 
 

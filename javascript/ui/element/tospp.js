@@ -31,7 +31,7 @@ var element = firebaseui.auth.ui.element;
  * @this {goog.ui.Component}
  */
 element.tospp.getTosPpElement = function() {
-  return this.getElementByClass('firebaseui-tos');
+  return this.getElementByClass(goog.getCssName('firebaseui-tos'));
 };
 
 
@@ -40,7 +40,7 @@ element.tospp.getTosPpElement = function() {
  * @this {goog.ui.Component}
  */
 element.tospp.getTosLinkElement = function() {
-  return this.getElementByClass('firebaseui-tos-link');
+  return this.getElementByClass(goog.getCssName('firebaseui-tos-link'));
 };
 
 
@@ -49,7 +49,7 @@ element.tospp.getTosLinkElement = function() {
  * @this {goog.ui.Component}
  */
 element.tospp.getPpLinkElement = function() {
-  return this.getElementByClass('firebaseui-pp-link');
+  return this.getElementByClass(goog.getCssName('firebaseui-pp-link'));
 };
 
 
@@ -58,7 +58,7 @@ element.tospp.getPpLinkElement = function() {
  * @this {goog.ui.Component}
  */
 element.tospp.getTosPpListElement = function() {
-  return this.getElementByClass('firebaseui-tos-list');
+  return this.getElementByClass(goog.getCssName('firebaseui-tos-list'));
 };
 
 });

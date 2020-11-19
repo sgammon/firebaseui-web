@@ -131,7 +131,8 @@ function createComponent(phoneNumber, opt_delay) {
  */
 function assertResendLinkIsHidden(component, isHidden) {
   var el = component.getResendLink();
-  assertEquals(isHidden, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(isHidden, goog.dom.classlist.contains(el,
+    goog.getCssName('firebaseui-hidden')));
 }
 
 
@@ -142,7 +143,8 @@ function assertResendLinkIsHidden(component, isHidden) {
  */
 function assertResendCountdownIsHidden(component, isHidden) {
   var el = component.getResendCountdown();
-  assertEquals(isHidden, goog.dom.classlist.contains(el, 'firebaseui-hidden'));
+  assertEquals(isHidden, goog.dom.classlist.contains(el,
+    goog.getCssName('firebaseui-hidden')));
 }
 
 

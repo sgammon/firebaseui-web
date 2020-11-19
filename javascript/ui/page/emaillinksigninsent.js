@@ -78,7 +78,7 @@ firebaseui.auth.ui.page.EmailLinkSignInSent =
    * @return {?Element} The trouble getting email link.
    */
   getTroubleGettingEmailLink() {
-    return this.getElementByClass('firebaseui-id-trouble-getting-email-link');
+    return this.getElementByClass(goog.getCssName('firebaseui-id-trouble-getting-email-link'));
   }
 
   /** @override */

@@ -77,7 +77,7 @@ firebaseui.auth.ui.page.EmailNotReceived =
    * @return {?Element} The resend email link.
    */
   getResendLink() {
-    return this.getElementByClass('firebaseui-id-resend-email-link');
+    return this.getElementByClass(goog.getCssName('firebaseui-id-resend-email-link'));
   }
 
   /** @override */

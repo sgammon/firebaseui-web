@@ -76,7 +76,7 @@ firebaseui.auth.ui.page.PasswordLinking =
   /** @return {string} The email address of the account. */
   checkAndGetEmail() {
     return goog.asserts.assertString(firebaseui.auth.ui.element.getInputValue(
-        this.getElementByClass('firebaseui-id-email')));
+        this.getElementByClass(goog.getCssName('firebaseui-id-email'))));
   }
 };
 

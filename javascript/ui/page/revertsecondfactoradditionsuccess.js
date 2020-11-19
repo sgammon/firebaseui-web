@@ -80,7 +80,7 @@ firebaseui.auth.ui.page.RevertSecondFactorAdditionSuccess =
    * @return {?Element} The reset password link.
    */
   getResetPasswordElement() {
-    return this.getElementByClass('firebaseui-id-reset-password-link');
+    return this.getElementByClass(goog.getCssName('firebaseui-id-reset-password-link'));
   }
 };
 

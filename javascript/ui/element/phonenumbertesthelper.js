@@ -298,7 +298,7 @@ element.PhoneNumberTestHelper.prototype.testChangeCountry_ =
  */
 element.PhoneNumberTestHelper.prototype.getCountrySelectorElement_ =
     function() {
-  return this.component.getElementByClass('firebaseui-id-country-selector');
+  return this.component.getElementByClass(goog.getCssName('firebaseui-id-country-selector'));
 };
 
 
@@ -309,7 +309,7 @@ element.PhoneNumberTestHelper.prototype.getCountrySelectorElement_ =
 element.PhoneNumberTestHelper.prototype.getCountrySelectorFlagElement_ =
     function() {
   return this.component.getElementByClass(
-      'firebaseui-id-country-selector-flag');
+      goog.getCssName('firebaseui-id-country-selector-flag'));
 };
 
 

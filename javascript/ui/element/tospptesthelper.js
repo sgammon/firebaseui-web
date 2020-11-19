@@ -67,7 +67,7 @@ element.TosPpTestHelper.prototype.assertFullMessage = function(
   if (!tosCallback && !privacyPolicyCallback) {
     assertNull(element);
   } else {
-    assertTrue(element.classList.contains('firebaseui-tospp-full-message'));
+    assertTrue(element.classList.contains(goog.getCssName('firebaseui-tospp-full-message')));
     this.assertTosLinkClicked_();
     this.assertPpLinkClicked_();
   }
@@ -86,7 +86,7 @@ element.TosPpTestHelper.prototype.assertFooter = function(
   if (!tosCallback && !privacyPolicyCallback) {
     assertNull(element);
   } else {
-    assertTrue(element.classList.contains('firebaseui-tos-list'));
+    assertTrue(element.classList.contains(goog.getCssName('firebaseui-tos-list')));
     this.assertTosLinkClicked_();
     this.assertPpLinkClicked_();
   }
@@ -103,7 +103,7 @@ element.TosPpTestHelper.prototype.assertFooter = function(
 element.TosPpTestHelper.prototype.assertPhoneFullMessage = function(
     tosCallback, privacyPolicyCallback) {
   var element = this.component.getTosPpElement();
-  assertTrue(element.classList.contains('firebaseui-phone-tos'));
+  assertTrue(element.classList.contains(goog.getCssName('firebaseui-phone-tos')));
   if (!tosCallback && !privacyPolicyCallback) {
     assertNull(this.component.getTosLinkElement());
     assertNull(this.component.getPpLinkElement());
@@ -124,7 +124,7 @@ element.TosPpTestHelper.prototype.assertPhoneFullMessage = function(
 element.TosPpTestHelper.prototype.assertPhoneFooter = function(
     tosCallback, privacyPolicyCallback) {
   var element = this.component.getTosPpElement();
-  assertTrue(element.classList.contains('firebaseui-phone-sms-notice'));
+  assertTrue(element.classList.contains(goog.getCssName('firebaseui-phone-sms-notice')));
   this.assertFooter(tosCallback, privacyPolicyCallback);
 };
 
