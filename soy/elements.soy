@@ -710,7 +710,7 @@
   {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
     {$defaultIconUrls?['oidc']}
   {else}
-    {$defaultIconUrls['password']}
+    {$defaultIconUrls?['password']}
   {/if}
 {/template}
 
@@ -730,11 +730,11 @@
   {elseif isNonnull($defaultButtonColors) and $defaultButtonColors[$providerConfig.providerId]}
     {$defaultButtonColors[$providerConfig.providerId]}
   {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
-    {$defaultButtonColors['saml']}
+    {$defaultButtonColors?['saml']}
   {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
-    {$defaultButtonColors['oidc']}
+    {$defaultButtonColors?['oidc']}
   {else}
-    {$defaultButtonColors['password']}
+    {$defaultButtonColors?['password']}
   {/if}
 {/template}
 
