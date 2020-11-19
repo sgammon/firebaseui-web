@@ -53,10 +53,10 @@ firebaseui.auth.ui.page.SHOW_PROCESSING_DELAY_ = 500;
 
 /**
  * The default icon URLs for the IdPs.
- * @const {!Object}
+ * @const {!Map<!string, !string>}
  * @private
  */
-firebaseui.auth.ui.page.DEFAULT_ICON_URLS_ = {
+firebaseui.auth.ui.page.DEFAULT_ICON_URLS_ = new Map(Object.entries({
   'google.com': firebaseui.auth.ui.page.IMAGE_BASE + 'google.svg',
   'github.com': firebaseui.auth.ui.page.IMAGE_BASE + 'github.svg',
   'facebook.com': firebaseui.auth.ui.page.IMAGE_BASE + 'facebook.svg',
@@ -69,15 +69,15 @@ firebaseui.auth.ui.page.DEFAULT_ICON_URLS_ = {
   'apple.com': firebaseui.auth.ui.page.IMAGE_BASE + 'apple.png',
   'saml': firebaseui.auth.ui.page.IMAGE_BASE + 'saml.svg',
   'oidc': firebaseui.auth.ui.page.IMAGE_BASE + 'oidc.svg',
-};
+}));
 
 
 /**
  * The default button colors for the IdPs.
- * @const {!Object}
+ * @const {!Map<!string, !string>}
  * @private
  */
-firebaseui.auth.ui.page.DEFAULT_BUTTON_COLORS_ = {
+firebaseui.auth.ui.page.DEFAULT_BUTTON_COLORS_ = new Map(Object.entries({
   'google.com': '#ffffff',
   'github.com': '#333333',
   'facebook.com': '#3b5998',
@@ -90,15 +90,15 @@ firebaseui.auth.ui.page.DEFAULT_BUTTON_COLORS_ = {
   'apple.com': '#000000',
   'saml': '#007bff',
   'oidc': '#007bff',
-};
+}));
 
 
 /**
  * The default display names for the IdPs.
- * @const {!Object}
+ * @const {!Map<!string, !string>}
  * @private
  */
-firebaseui.auth.ui.page.DEFAULT_PROVIDER_NAMES_ = {
+firebaseui.auth.ui.page.DEFAULT_PROVIDER_NAMES_ = new Map(Object.entries({
   'google.com': 'Google',
   'github.com': 'GitHub',
   'facebook.com': 'Facebook',
@@ -109,7 +109,7 @@ firebaseui.auth.ui.page.DEFAULT_PROVIDER_NAMES_ = {
   'microsoft.com': 'Microsoft',
   'yahoo.com': 'Yahoo',
   'apple.com': 'Apple',
-};
+}));
 
 
 /**
