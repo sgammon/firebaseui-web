@@ -651,8 +651,8 @@
 
   {if $providerConfig.providerName}
     {$providerConfig.providerName}
-  {elseif isNonnull($defaultProviderNames) and $defaultProviderNames[$providerConfig.providerId]}
-    {$defaultProviderNames[$providerConfig.providerId]}
+  {elseif isNonnull($defaultProviderNames) and $defaultProviderNames[$providerConfig.providerId ?: "_DEFAULT_"]}
+    {$defaultProviderNames[$providerConfig.providerId ?: "_DEFAULT_"]}
   {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'saml.') == 0}
     {strSub($providerConfig.providerId, 5)}
   {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
@@ -704,11 +704,11 @@
   {if $providerConfig.iconUrl}
     {$providerConfig.iconUrl}
   {elseif isNonnull($defaultIconUrls) and $defaultIconUrls[$providerConfig.providerId]}
-    {$defaultIconUrls[$providerConfig.providerId]}
+    {$defaultIconUrls?[$providerConfig.providerId]}
   {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
-    {$defaultIconUrls['saml']}
+    {$defaultIconUrls?['saml']}
   {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
-    {$defaultIconUrls['oidc']}
+    {$defaultIconUrls?['oidc']}
   {else}
     {$defaultIconUrls['password']}
   {/if}
