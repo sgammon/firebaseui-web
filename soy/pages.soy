@@ -1241,13 +1241,13 @@
     <div class="firebaseui-card-content">
       <form onsubmit="return false;">
         <ul class="firebaseui-idp-list">
-          {foreach $providerConfig in $providerConfigs}
+          {for $providerConfig in $providerConfigs}
             <li class="firebaseui-list-item">
               {call firebaseui.auth.soy2.element.idpButton}
                 {param providerConfig: $providerConfig /}
               {/call}
             </li>
-          {/foreach}
+          {/for}
         </ul>
       </form>
     </div>
@@ -1395,13 +1395,13 @@
     <div class="firebaseui-card-content">
       <form onsubmit="return false;">
         <ul class="firebaseui-tenant-list">
-          {foreach $tenantConfig in $tenantConfigs}
+          {for $tenantConfig in $tenantConfigs}
             <li class="firebaseui-list-item">
               {call firebaseui.auth.soy2.element.tenantSelectionButton}
                 {param tenantConfig: $tenantConfig /}
               {/call}
             </li>
-          {/foreach}
+          {/for}
         </ul>
       </form>
     </div>
