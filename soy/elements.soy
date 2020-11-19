@@ -24,8 +24,8 @@
   {@param? email: string} /** The email address to prefill. */
   {@param? disabled: bool} /** Whether the email input is disabled or not. */
   {@param? changeEmail: bool} /** Whether to use change email label. */
-  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-email-input">
+  <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-email-input')}">
       {if $changeEmail}
         {msg desc="Label of a change email address input field."}Enter new email address{/msg}
       {else}
@@ -37,13 +37,13 @@
         name="email"
         id="ui-sign-in-email-input"
         autocomplete="username"
-        class="mdl-textfield__input firebaseui-input firebaseui-id-email"
+        class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-email')}"
         value="{$email ?: ''}"
         {if $disabled}disabled{/if}>
   </div>
-  <div class="firebaseui-error-wrapper">
-    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-              firebaseui-id-email-error"></p>
+  <div class="{css('firebaseui-error-wrapper')}">
+    <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+              {css('firebaseui-id-email-error')}"></p>
   </div>
 {/template}
 
@@ -54,30 +54,30 @@
 {template .phoneNumber}
   {@param? nationalNumber: string} /** The phone number to prefill. */
 
-  <div class="firebaseui-phone-number">
-    <button class="firebaseui-id-country-selector firebaseui-country-selector{sp}
-                   mdl-button mdl-js-button">
-      <span class="firebaseui-flag firebaseui-country-selector-flag{sp}
-                   firebaseui-id-country-selector-flag"></span>
-      <span class="firebaseui-id-country-selector-code">
+  <div class="{css('firebaseui-phone-number')}">
+    <button class="{css('firebaseui-id-country-selector')} {css('firebaseui-country-selector')}{sp}
+                   {css('mdl-button')} {css('mdl-js-button')}">
+      <span class="{css('firebaseui-flag')} {css('firebaseui-country-selector-flag')}{sp}
+                   {css('firebaseui-id-country-selector-flag')}"></span>
+      <span class="{css('firebaseui-id-country-selector-code')}">
       </span>
     </button>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label{sp}
-                firebaseui-textfield firebaseui-phone-input-wrapper">
-      <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-phone-number-input">
+    <div class="{css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}{sp}
+                {css('firebaseui-textfield')} {css('firebaseui-phone-input-wrapper')}">
+      <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-phone-number-input')}">
         {msg desc="Label of an phone number input field."}Phone number{/msg}
       </label>
       <input 
           type="tel" 
           name="phoneNumber"
           id="ui-sign-in-phone-number-input"
-          class="mdl-textfield__input firebaseui-input firebaseui-id-phone-number"
+          class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-phone-number')}"
           value="{$nationalNumber ?: ''}">
     </div>
   </div>
-  <div class="firebaseui-error-wrapper">
-    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-              firebaseui-phone-number-error firebaseui-id-phone-number-error"></p>
+  <div class="{css('firebaseui-error-wrapper')}">
+    <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+              {css('firebaseui-phone-number-error')} {css('firebaseui-id-phone-number-error')}"></p>
   </div>
 {/template}
 
@@ -86,20 +86,20 @@
  * Renders a phone confirmation code input field.
  */
 {template .phoneConfirmationCode}
-  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield{sp}
-      mdl-textfield--floating-label">
-    <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-phone-confirmation-code-input">
+  <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')}{sp}
+              {css('mdl-textfield--floating-label')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-phone-confirmation-code-input')}">
       {msg desc="Label of 6-digit SMS verification code."}6-digit code{/msg}
     </label>
     <input 
         type="number"
         name="phoneConfirmationCode"
         id="ui-sign-in-phone-confirmation-code-input"
-        class="mdl-textfield__input firebaseui-input firebaseui-id-phone-confirmation-code">
+        class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-phone-confirmation-code')}">
   </div>
-  <div class="firebaseui-error-wrapper">
-    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-              firebaseui-id-phone-confirmation-code-error"></p>
+  <div class="{css('firebaseui-error-wrapper')}">
+    <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+              {css('firebaseui-id-phone-confirmation-code-error')}"></p>
   </div>
 {/template}
 
@@ -108,11 +108,11 @@
  * Renders resend elements.
  */
 {template .resend}
-  <div class="firebaseui-resend-container">
-    <span class="firebaseui-id-resend-countdown">
+  <div class="{css('firebaseui-resend-container')}">
+    <span class="{css('firebaseui-id-resend-countdown')}">
     </span>
-    <a href="javascript:void(0)" class="firebaseui-id-resend-link firebaseui-hidden{sp}
-                                        firebaseui-link">
+    <a href="javascript:void(0)" class="{css('firebaseui-id-resend-link')} {css('firebaseui-hidden')}{sp}
+                                        {css('firebaseui-link')}">
       {msg desc="A link to trigger re-sending the phone confirmation code."}Resend{/msg}
     </a>
   </div>
@@ -126,18 +126,18 @@
   {@param? providerConfig: [providerId:string, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
   <button
-      class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised{sp}
-             {call .idpClass data="all" /} firebaseui-id-idp-button"
+      class="{css('firebaseui-idp-button')} {css('mdl-button')} {css('mdl-js-button')} {css('mdl-button--raised')}{sp}
+             {call .idpClass data="all" /} {css('firebaseui-id-idp-button')}"
       data-provider-id="{$providerConfig.providerId}"
       style="background-color:{call .idpColor data="all" /}">
-    <span class="firebaseui-idp-icon-wrapper">
+    <span class="{css('firebaseui-idp-icon-wrapper')}">
       <img
-          class="firebaseui-idp-icon"
+          class="{css('firebaseui-idp-icon')}"
           alt=""
           src="{call .idpLogo data="all" /}">
     </span>
     {if $providerConfig.providerId == 'password'}
-      <span class="firebaseui-idp-text firebaseui-idp-text-long">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-long')}">
         {if $providerConfig.fullLabel}
           {$providerConfig.fullLabel}
         {elseif $providerConfig.providerName}
@@ -152,7 +152,7 @@
           {/msg}
         {/if}
       </span>
-      <span class="firebaseui-idp-text firebaseui-idp-text-short">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-short')}">
         {if $providerConfig.providerName}
           {$providerConfig.providerName}
         {else}
@@ -163,7 +163,7 @@
         {/if}
       </span>
     {elseif $providerConfig.providerId == 'phone'}
-      <span class="firebaseui-idp-text firebaseui-idp-text-long">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-long')}">
         {if $providerConfig.fullLabel}
           {$providerConfig.fullLabel}
         {elseif $providerConfig.providerName}
@@ -178,7 +178,7 @@
           {/msg}
         {/if}
       </span>
-      <span class="firebaseui-idp-text firebaseui-idp-text-short">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-short')}">
         {if $providerConfig.providerName}
           {$providerConfig.providerName}
         {else}
@@ -189,7 +189,7 @@
         {/if}
       </span>
     {elseif $providerConfig.providerId == 'anonymous'}
-      <span class="firebaseui-idp-text firebaseui-idp-text-long">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-long')}">
         {if $providerConfig.fullLabel}
           {$providerConfig.fullLabel}
         {elseif $providerConfig.providerName}
@@ -204,7 +204,7 @@
           {/msg}
         {/if}
       </span>
-      <span class="firebaseui-idp-text firebaseui-idp-text-short">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-short')}">
         {if $providerConfig.providerName}
           {$providerConfig.providerName}
         {else}
@@ -215,7 +215,7 @@
         {/if}
       </span>
     {else}
-      <span class="firebaseui-idp-text firebaseui-idp-text-long">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-long')}">
         {if $providerConfig.fullLabel}
           {$providerConfig.fullLabel}
         {else}
@@ -225,7 +225,7 @@
           {/msg}
         {/if}
       </span>
-      <span class="firebaseui-idp-text firebaseui-idp-text-short">
+      <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-short')}">
         {if $providerConfig.providerName}
           {$providerConfig.providerName}
         {else}
@@ -242,8 +242,8 @@
  */
 {template .submitButton}
   {@param? label: string} /** Label of the button, defaulting to "Next" if not specified. */
-  <button type="submit" class="firebaseui-id-submit firebaseui-button{sp}
-      mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  <button type="submit" class="{css('firebaseui-id-submit')} {css('firebaseui-button')}{sp}
+      {css('mdl-button')} {css('mdl-js-button')} {css('mdl-button--raised')} {css('mdl-button--colored')}">
     {if $label}
       {$label}
     {else}
@@ -259,7 +259,7 @@
  * Renders a Trouble getting email button.
  */
 {template .troubleGettingEmailButton}
-  <a class="firebaseui-link firebaseui-id-trouble-getting-email-link"
+  <a class="{css('firebaseui-link')} {css('firebaseui-id-trouble-getting-email-link')}"
       href="javascript:void(0)">
     {msg desc="The label of the button that will redirect to the screen with instructions for
         troubleshooting issues related to not receiving an email message."}
@@ -273,7 +273,7 @@
  * Renders a resend email link button.
  */
 {template .resendEmailLinkButton}
-  <a class="firebaseui-link firebaseui-id-resend-email-link"
+  <a class="{css('firebaseui-link')} {css('firebaseui-id-resend-email-link')}"
       href="javascript:void(0)">
     {msg desc="Label of the resend email link button"}Resend{/msg}
   </a>
@@ -328,8 +328,8 @@
  */
 {template .name}
   {@param? name: string} /** The display name to prefill. */
-  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-name-input">
+  <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-name-input')}">
       {msg desc="Label of a field for setting the user's name."}First &amp; last name{/msg}
     </label>
     <input
@@ -337,12 +337,12 @@
         name="name"
         id="ui-sign-in-name-input"
         autocomplete="name"
-        class="mdl-textfield__input firebaseui-input firebaseui-id-name"
+        class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-name')}"
         value="{$name ?: ''}">
   </div>
-  <div class="firebaseui-error-wrapper">
-    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-              firebaseui-id-name-error"></p>
+  <div class="{css('firebaseui-error-wrapper')}">
+    <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+              {css('firebaseui-id-name-error')}"></p>
   </div>
 {/template}
 
@@ -353,9 +353,9 @@
  */
 {template .newPassword}
   {@param? label: string} /** The placeholder text in the field, defaulting to "Choose password". */
-  <div class="firebaseui-new-password-component">
-    <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-new-password-input">
+  <div class="{css('firebaseui-new-password-component')}">
+    <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
+      <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-new-password-input')}">
         {if $label}
           {$label}
         {else}
@@ -367,14 +367,14 @@
           name="newPassword"
           id="ui-sign-in-new-password-input"
           autocomplete="new-password"
-          class="mdl-textfield__input firebaseui-input firebaseui-id-new-password">
+          class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-new-password')}">
     </div>
-    <a href="javascript:void(0)" class="firebaseui-input-floating-button{sp}
-        firebaseui-id-password-toggle firebaseui-input-toggle-on firebaseui-input-toggle-blur">
+    <a href="javascript:void(0)" class="{css('firebaseui-input-floating-button')}{sp}
+        {css('firebaseui-id-password-toggle')} {css('firebaseui-input-toggle-on')} {css('firebaseui-input-toggle-blur')}">
     </a>
-    <div class="firebaseui-error-wrapper">
-      <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-          firebaseui-id-new-password-error">
+    <div class="{css('firebaseui-error-wrapper')}">
+      <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+          {css('firebaseui-id-new-password-error')}">
       </p>
     </div>
   </div>
@@ -386,8 +386,8 @@
  */
 {template .password}
   {@param? current: bool} /** Whether to show "Current password" or "Password" label. */
-  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <label class="mdl-textfield__label firebaseui-label" for="ui-sign-in-password-input">
+  <div class="{css('firebaseui-textfield')} {css('mdl-textfield')} {css('mdl-js-textfield')} {css('mdl-textfield--floating-label')}">
+    <label class="{css('mdl-textfield__label')} {css('firebaseui-label"')} {css('for="ui-sign-in-password-input')}">
       {if $current}
         {msg desc="Label of a password field."}Current password{/msg}
       {else}
@@ -399,11 +399,11 @@
         name="password"
         id="ui-sign-in-password-input"
         autocomplete="current-password"
-        class="mdl-textfield__input firebaseui-input firebaseui-id-password">
+        class="{css('mdl-textfield__input')} {css('firebaseui-input')} {css('firebaseui-id-password')}">
   </div>
-  <div class="firebaseui-error-wrapper">
-    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden{sp}
-              firebaseui-id-password-error">
+  <div class="{css('firebaseui-error-wrapper')}">
+    <p class="{css('firebaseui-error')} {css('firebaseui-text-input-error')} {css('firebaseui-hidden')}{sp}
+              {css('firebaseui-id-password-error')}">
     </p>
   </div>
 {/template}
@@ -413,7 +413,7 @@
  * Renders the password recovery button.
  */
 {template .passwordRecoveryButton}
-  <a class="firebaseui-link firebaseui-id-secondary-link" href="javascript:void(0)">
+  <a class="{css('firebaseui-link')} {css('firebaseui-id-secondary-link"')} {css('href="javascript:void(0)')}">
     {msg desc="Label of the password recovery link"}Trouble signing in?{/msg}
   </a>
 {/template}
@@ -424,8 +424,8 @@
  */
 {template .cancelButton}
   {@param? label: string} /** Label of the button, defaulting to "Cancel" if not specified. */
-  <button class="firebaseui-id-secondary-link firebaseui-button mdl-button mdl-js-button{sp}
-                 mdl-button--primary">
+  <button class="{css('firebaseui-id-secondary-link')} {css('firebaseui-button')} {css('mdl-button')} {css('mdl-js-button')}{sp}
+                 {css('mdl-button--primary')}">
     {if $label}
       {$label}
     {else}
@@ -439,7 +439,7 @@
  * Renders a notice to the user about SMS rates.
  */
 {template .phoneAuthSmsNotice}
-  <p class="firebaseui-tos firebaseui-phone-sms-notice">
+  <p class="{css('firebaseui-tos')} {css('firebaseui-phone-sms-notice')}">
     {msg desc="Notify the user that an SMS may be sent, which may cost the user money.
         Note that 'Verify' must match the the label of the 'Verify' button that initiates the
         phone number verification."}
@@ -457,14 +457,14 @@
   {@inject? privacyPolicyCallback: string}
 
   {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
-    <ul class="firebaseui-tos-list firebaseui-tos">
-      <li class="firebaseui-inline-list-item">
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-tos-link" target="_blank">
+    <ul class="{css('firebaseui-tos-list')} {css('firebaseui-tos')}">
+      <li class="{css('firebaseui-inline-list-item')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
           {msg desc="Label for the terms of service"}Terms of Service{/msg}
         </a>
       </li>
-      <li class="firebaseui-inline-list-item">
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-pp-link" target="_blank">
+      <li class="{css('firebaseui-inline-list-item')}">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
           {msg desc="Label for the privacy policy"}Privacy Policy{/msg}
         </a>
       </li>
@@ -481,16 +481,16 @@
   {@inject? tosCallback: string}
   {@inject? privacyPolicyCallback: string}
 
-  <p class="firebaseui-tos firebaseui-phone-tos">
+  <p class="{css('firebaseui-tos')} {css('firebaseui-phone-tos')}">
     {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
       {msg desc="The terms of service and privacy policy for a phone authentication flow. Note that
           'Verify' must match the the label of the 'Verify' button that completes the
           phone number verification flow."}
         By tapping Verify, you are indicating that you accept our{sp}
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-tos-link" target="_blank">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
           Terms of Service
         </a> and{sp}
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-pp-link" target="_blank">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
           Privacy Policy
         </a>
         . An SMS may be sent. Message &amp; data rates may apply.
@@ -514,13 +514,13 @@
   {@inject? privacyPolicyCallback: string}
 
   {if isNonnull($tosCallback) and isNonnull($privacyPolicyCallback)}
-    <p class="firebaseui-tos firebaseui-tospp-full-message">
+    <p class="{css('firebaseui-tos')} {css('firebaseui-tospp-full-message')}">
       {msg desc="The terms of service and privacy policy for the first page."}
         By continuing, you are indicating that you accept our{sp}
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-tos-link" target="_blank">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-tos-link"')} {css('target="_blank')}">
           Terms of Service
         </a> and{sp}
-        <a href="javascript:void(0)" class="firebaseui-link firebaseui-pp-link" target="_blank">
+        <a href="javascript:void(0)" class="{css('firebaseui-link')} {css('firebaseui-pp-link"')} {css('target="_blank')}">
           Privacy Policy
         </a>.
       {/msg}
@@ -534,11 +534,11 @@
  */
 {template .infoBar}
   {@param message: string} /** The message to show. */
-  <div class="firebaseui-info-bar firebaseui-id-info-bar">
-    <p class="firebaseui-info-bar-message">
+  <div class="{css('firebaseui-info-bar')} {css('firebaseui-id-info-bar')}">
+    <p class="{css('firebaseui-info-bar-message')}">
       {$message}&nbsp;&nbsp;
       <a href="javascript:void(0)"
-         class="firebaseui-link firebaseui-id-dismiss-info-bar">
+         class="{css('firebaseui-link')} {css('firebaseui-id-dismiss-info-bar')}">
         {msg desc="label of a button which dismisses the notification message"}
           Dismiss
         {/msg}
@@ -555,7 +555,7 @@
   {@param content: html}
   {@param? classes: string} /** Additional classes to apply to the dialog. */
 
-  <dialog class="mdl-dialog firebaseui-dialog firebaseui-id-dialog
+  <dialog class="{css('mdl-dialog')} {css('firebaseui-dialog')} {css('firebaseui-id-dialog')}
                  {if $classes}{sp}{$classes}{/if}">
     {$content}
   </dialog>
@@ -571,10 +571,10 @@
 
   {call .dialog}
     {param content kind="html"}
-      <div class="firebaseui-dialog-icon-wrapper">
-        <div class="{$iconClass} firebaseui-dialog-icon"></div>
+      <div class="{css('firebaseui-dialog-icon-wrapper')}">
+        <div class="{$iconClass} {css('firebaseui-dialog-icon')}"></div>
       </div>
-      <div class="firebaseui-progress-dialog-message">
+      <div class="{css('firebaseui-progress-dialog-message')}">
         {$message}
       </div>
     {/param}
@@ -591,17 +591,17 @@
   {call .dialog}
     {param classes kind="text"}firebaseui-list-box-dialog{/param}
     {param content kind="html"}
-      <div class="firebaseui-list-box-actions">
+      <div class="{css('firebaseui-list-box-actions')}">
         {for $item in $items}
           <button type="button" data-listboxid="{$item.id}"
-                  class="mdl-button firebaseui-id-list-box-dialog-button{sp}
-                         firebaseui-list-box-dialog-button">
+                  class="{css('mdl-button')} {css('firebaseui-id-list-box-dialog-button')}{sp}
+                         {css('firebaseui-list-box-dialog-button')}">
             {if $item.iconClass}
-              <div class="firebaseui-list-box-icon-wrapper">
-                <div class="firebaseui-list-box-icon {$item.iconClass}"></div>
+              <div class="{css('firebaseui-list-box-icon-wrapper')}">
+                <div class="{css('firebaseui-list-box-icon')} {css('{$item.iconClass}')}"></div>
               </div>
             {/if}
-            <div class="firebaseui-list-box-label-wrapper">
+            <div class="{css('firebaseui-list-box-label-wrapper')}">
               {$item.label}
             </div>
           </button>
@@ -618,11 +618,11 @@
 {template .busyIndicator}
   {@param? useSpinner: bool}
   {if $useSpinner}
-    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active{sp}
-        firebaseui-busy-indicator firebaseui-id-busy-indicator"></div>
+    <div class="{css('mdl-spinner')} {css('mdl-spinner--single-color')} {css('mdl-js-spinner')} {css('is-active')}{sp}
+        {css('firebaseui-busy-indicator')} {css('firebaseui-id-busy-indicator')}"></div>
   {else}
-    <div class="mdl-progress mdl-js-progress mdl-progress__indeterminate{sp}
-        firebaseui-busy-indicator firebaseui-id-busy-indicator"></div>
+    <div class="{css('mdl-progress')} {css('mdl-js-progress')} {css('mdl-progress__indeterminate')}{sp}
+        {css('firebaseui-busy-indicator')} {css('firebaseui-id-busy-indicator')}"></div>
   {/if}
 {/template}
 
@@ -631,10 +631,10 @@
  * Renders a visible reCAPTCHA container.
  */
 {template .recaptcha}
-  <div class="firebaseui-recaptcha-wrapper">
-    <div class="firebaseui-recaptcha-container"></div>
-    <div class="firebaseui-error-wrapper firebaseui-recaptcha-error-wrapper">
-      <p class="firebaseui-error firebaseui-hidden firebaseui-id-recaptcha-error"></p>
+  <div class="{css('firebaseui-recaptcha-wrapper')}">
+    <div class="{css('firebaseui-recaptcha-container')}"></div>
+    <div class="{css('firebaseui-error-wrapper')} {css('firebaseui-recaptcha-error-wrapper')}">
+      <p class="{css('firebaseui-error')} {css('firebaseui-hidden')} {css('firebaseui-id-recaptcha-error')}"></p>
     </div>
   </div>
 {/template}
@@ -653,9 +653,9 @@
     {$providerConfig.providerName}
   {elseif isNonnull($defaultProviderNames) and $defaultProviderNames[$providerConfig.providerId ?: "_DEFAULT_"]}
     {$defaultProviderNames[$providerConfig.providerId ?: "_DEFAULT_"]}
-  {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'saml.') == 0}
+  {elseif isNonnull($defaultProviderNames) and $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'saml.') == 0}
     {strSub($providerConfig.providerId, 5)}
-  {elseif $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
+  {elseif isNonnull($defaultProviderNames) and $providerConfig.providerId and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
     {strSub($providerConfig.providerId, 5)}
   {else}
     {$providerConfig.providerId}
@@ -703,13 +703,13 @@
 
   {if $providerConfig.iconUrl}
     {$providerConfig.iconUrl}
-  {elseif isNonnull($defaultIconUrls) and $defaultIconUrls[$providerConfig.providerId]}
+  {elseif isNonnull($defaultIconUrls) and $defaultIconUrls?[$providerConfig.providerId]}
     {$defaultIconUrls?[$providerConfig.providerId]}
-  {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
+  {elseif isNonnull($defaultIconUrls) and strIndexOf($providerConfig.providerId, 'saml.') == 0}
     {$defaultIconUrls?['saml']}
-  {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
+  {elseif isNonnull($defaultIconUrls) and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
     {$defaultIconUrls?['oidc']}
-  {else}
+  {elseif isNonnull($defaultIconUrls)}
     {$defaultIconUrls?['password']}
   {/if}
 {/template}
@@ -727,13 +727,13 @@
 
   {if $providerConfig.buttonColor}
     {$providerConfig.buttonColor}
-  {elseif isNonnull($defaultButtonColors) and $defaultButtonColors[$providerConfig.providerId]}
+  {elseif isNonnull($defaultButtonColors) and $defaultButtonColors?[$providerConfig.providerId]}
     {$defaultButtonColors[$providerConfig.providerId]}
-  {elseif strIndexOf($providerConfig.providerId, 'saml.') == 0}
+  {elseif isNonnull($defaultButtonColors) and strIndexOf($providerConfig.providerId, 'saml.') == 0}
     {$defaultButtonColors?['saml']}
-  {elseif strIndexOf($providerConfig.providerId, 'oidc.') == 0}
+  {elseif isNonnull($defaultButtonColors) and strIndexOf($providerConfig.providerId, 'oidc.') == 0}
     {$defaultButtonColors?['oidc']}
-  {else}
+  {elseif isNonnull($defaultButtonColors)}
     {$defaultButtonColors?['password']}
   {/if}
 {/template}
@@ -753,17 +753,17 @@
     {/if}
   {/let}
   <button
-      class="firebaseui-tenant-button mdl-button mdl-js-button mdl-button--raised{sp}
-             firebaseui-tenant-selection-{$tenantClass} firebaseui-id-tenant-selection-button"
+      class="{css('firebaseui-tenant-button')} {css('mdl-button')} {css('mdl-js-button')} {css('mdl-button--raised')}{sp}
+             firebaseui-tenant-selection-{$tenantClass} {css('firebaseui-id-tenant-selection-button')}"
       {if $tenantConfig.tenantId}data-tenant-id="{$tenantConfig.tenantId}"{/if}
       style="background-color:{$tenantConfig.buttonColor}">
-    <span class="firebaseui-idp-icon-wrapper">
+    <span class="{css('firebaseui-idp-icon-wrapper')}">
       <img
-          class="firebaseui-idp-icon"
+          class="{css('firebaseui-idp-icon')}"
           alt=""
           src="{$tenantConfig.iconUrl}">
     </span>
-    <span class="firebaseui-idp-text firebaseui-idp-text-long">
+    <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-long')}">
       {if $tenantConfig.fullLabel}
         {$tenantConfig.fullLabel}
       {else}
@@ -772,7 +772,7 @@
         {/msg}
       {/if}
     </span>
-    <span class="firebaseui-idp-text firebaseui-idp-text-short">
+    <span class="{css('firebaseui-idp-text')} {css('firebaseui-idp-text-short')}">
       {msg desc="Label for a button to sign in to a tenant. The short version"}
         {$tenantConfig.displayName}
       {/msg}

@@ -24,27 +24,27 @@
   {@param? email: string} /** The email address to prefill. */
   {@param? displayCancelButton: bool} /** Whether to display the cancel button. */
   {@param? displayFullTosPpMessage: bool} /** Whether to display the full message of ToS and PP. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-sign-in">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-sign-in')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of the email/password sign-in page."}Sign in with email{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <div class="firebaseui-relative-wrapper">
+      <div class="{css('firebaseui-card-content')}">
+        <div class="{css('firebaseui-relative-wrapper')}">
           {call firebaseui.auth.soy2.element.email data="all" /}
         </div>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {if $displayCancelButton}
             {call firebaseui.auth.soy2.element.cancelButton /}
           {/if}
           {call firebaseui.auth.soy2.element.submitButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {if $displayFullTosPpMessage}
           {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
         {else}
@@ -62,24 +62,24 @@
 {template .passwordSignIn}
   {@param? email: string} /** The email address to prefill. */
   {@param? displayFullTosPpMessage: bool} /** Whether to display the full message of ToS and PP. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-sign-in">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-password-sign-in')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
+      <div class="{css('firebaseui-card-content')}">
         {call firebaseui.auth.soy2.element.email data="all" /}
         {call firebaseui.auth.soy2.element.password /}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-links">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-links')}">
           {call firebaseui.auth.soy2.element.passwordRecoveryButton /}
         </div>
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.signInButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {if $displayFullTosPpMessage}
           {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
         {else}
@@ -100,29 +100,29 @@
   {@param? name: string} /** The name to prefill. */
   {@param? allowCancel: bool} /** Whether to show the cancel link. */
   {@param? displayFullTosPpMessage: bool} /** Whether to display the full message of ToS and PP. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-sign-up">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-password-sign-up')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a sign-up page."}Create account{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
+      <div class="{css('firebaseui-card-content')}">
         {call firebaseui.auth.soy2.element.email data="all" /}
         {if $requireDisplayName}
           {call firebaseui.auth.soy2.element.name data="all" /}
         {/if}
         {call firebaseui.auth.soy2.element.newPassword /}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {if $allowCancel}
             {call firebaseui.auth.soy2.element.cancelButton /}
           {/if}
           {call firebaseui.auth.soy2.element.saveButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {if $displayFullTosPpMessage}
           {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
         {else}
@@ -140,23 +140,23 @@
 {template .passwordRecovery}
   {@param? email: string} /** The email address to prefill. */
   {@param? allowCancel: bool} /** Whether to show the cancel link. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-recovery">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-password-recovery')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a password recovery page."}Recover password{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Information on how the user resets their password."}
             Get instructions sent to this email that explain how to reset your password
           {/msg}
         </p>
         {call firebaseui.auth.soy2.element.email data="all" /}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {if $allowCancel}
             {call firebaseui.auth.soy2.element.cancelButton /}
           {/if}
@@ -169,7 +169,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -183,25 +183,25 @@
 {template .passwordRecoveryEmailSent}
   {@param email: string} /** The email address to which the password reset email has been sent. */
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-password-recovery-email-sent">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-password-recovery-email-sent')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a notice page when the password recovery email has been sent."}
           Check your email
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page when the password recovery email has been sent."}
           Follow the instructions sent to <strong>{$email}</strong> to recover your password
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
               {msg desc="Label of a button that finishes the password recovery flow."}
@@ -212,7 +212,7 @@
         </div>
       {/if}
     </div>
-    <div class="firebaseui-card-footer">
+    <div class="{css('firebaseui-card-footer')}">
       {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
     </div>
   </div>
@@ -224,8 +224,8 @@
  * API so that the user won't be confused by the blank page.
  */
 {template .callback}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-callback">
-    <div class="firebaseui-callback-indicator-container">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-callback')}">
+    <div class="{css('firebaseui-callback-indicator-container')}">
       {call firebaseui.auth.soy2.element.busyIndicator /}
     </div>
   </div>
@@ -236,7 +236,7 @@
  * Renders a page which simply shows a spinner.
  */
 {template .spinner}
-  <div class="firebaseui-container firebaseui-id-page-spinner">
+  <div class="{css('firebaseui-container')} {css('firebaseui-id-page-spinner')}">
     {call firebaseui.auth.soy2.element.busyIndicator}
       {param useSpinner: true /}
     {/call}
@@ -249,7 +249,7 @@
  * remote API so that the user won't be confused by the blank page.
  */
 {template .blank}
-  <div class="firebaseui-container firebaseui-id-page-blank firebaseui-use-spinner">
+  <div class="{css('firebaseui-container')} {css('firebaseui-id-page-blank')} {css('firebaseui-use-spinner')}">
   </div>
 {/template}
 
@@ -260,28 +260,28 @@
 {template .emailLinkSignInSent}
   /** The user's email. */
   {@param email:string}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-email-link-sign-in-sent">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-email-link-sign-in-sent')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a email link sign-in sent page."}Sign-in email sent{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <div class="firebaseui-email-sent"></div>
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <div class="{css('firebaseui-email-sent')}"></div>
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that a link was sent to user's email to complete sign-in."}
             A sign-in email with additional instructions was sent to <strong>{$email}</strong>.
             Check your email to complete sign-in.
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-links">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-links')}">
           {call firebaseui.auth.soy2.element.troubleGettingEmailButton /}
         </div>
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton}
             {param label kind="text"}
               {msg desc="Label for the button to go back to the previous page."}
@@ -291,7 +291,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -303,18 +303,18 @@
  * Renders an email not received troubleshooting page.
  */
 {template .emailNotReceived}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-email-not-received">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-email-not-received')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header for email not received troubleshooting page."}
             Trouble getting email?
           {/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Introduction to common fixes when a user fails to receive an email."}
             Try these common fixes:
           {/msg}
@@ -342,7 +342,7 @@
             </li>
           </ul>
         </p>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that a user can resend an email but that the new email will expire any
               sign-in codes sent in the previous email."}
             If the steps above didn't work, you can resend the email. Note that this will
@@ -350,11 +350,11 @@
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-links">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-links')}">
           {call firebaseui.auth.soy2.element.resendEmailLinkButton /}
         </div>
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton}
             {param label kind="text"}
               {msg desc="Label for the button to go back to the previous page."}
@@ -364,7 +364,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -379,32 +379,32 @@
 {template .emailLinkSignInConfirmation}
   /** The user's email. */
   {@param? email:string}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-email-link-sign-in-confirmation">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-email-link-sign-in-confirmation')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a email link sign-in confirmation page."}Confirm email{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Header of a page displayed when the user is required to provide their email
               before completing sign-in."}
             Confirm your email to complete sign in
           {/msg}
         </p>
-        <div class="firebaseui-relative-wrapper">
+        <div class="{css('firebaseui-relative-wrapper')}">
           {call firebaseui.auth.soy2.element.email data="all" /}
         </div>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton /}
           {call firebaseui.auth.soy2.element.submitButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -416,18 +416,18 @@
  * Renders a notice page that the flow was opened on a different device.
  */
 {template .differentDeviceError}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-different-device-error">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-different-device-error')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a notice page when a user tries to complete sign-in on a device or
             browser different from the one they started the sign-in flow with."}
           New device or browser detected
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Header of a page displayed when the user opens the sign-in email link on a
             different device or browser. The user is expected to open the email link on the same
             device they started the flow with."}
@@ -436,8 +436,8 @@
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
-      <div class="firebaseui-form-actions">
+    <div class="{css('firebaseui-card-actions')}">
+      <div class="{css('firebaseui-form-actions')}">
         {call firebaseui.auth.soy2.element.cancelButton}
           {param label kind="text"}
             {msg desc="Label for the button to go back to the previous page."}
@@ -456,17 +456,17 @@
  * anonymous user being found.
  */
 {template .anonymousUserMismatch}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-anonymous-user-mismatch">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-anonymous-user-mismatch')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a notice page when a user session is expired or cleared."}
           Session ended
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Message that explains to the user that their sign-in session was cleared or
             expired. This may happen when an anonymous user tries to upgrade to an email user but
             on sign-in completion, the underlying anonymous user is discovered to no longer be
@@ -475,8 +475,8 @@
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
-      <div class="firebaseui-form-actions">
+    <div class="{css('firebaseui-card-actions')}">
+      <div class="{css('firebaseui-form-actions')}">
         {call firebaseui.auth.soy2.element.cancelButton}
           {param label kind="text"}
             {msg desc="Label for the button to go back to the previous page."}
@@ -496,19 +496,19 @@
 {template .passwordLinking}
   /** The user's email. */
   {@param email:string}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-linking">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-password-linking')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <h2 class="firebaseui-subtitle">
+      <div class="{css('firebaseui-card-content')}">
+        <h2 class="{css('firebaseui-subtitle')}">
           {msg desc="Header of a page displayed when the user has signed in before with an email and
               password account."}
             You already have an account
           {/msg}
         </h2>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that reminds the user the previous and current sign-in status."}
             You’ve already used <strong>{$email}</strong> to sign in. Enter your password for that
             account.
@@ -516,15 +516,15 @@
         </p>
         {call firebaseui.auth.soy2.element.password /}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-links">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-links')}">
           {call firebaseui.auth.soy2.element.passwordRecoveryButton /}
         </div>
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.signInButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -540,20 +540,20 @@
   {@param? providerConfig: [providerId:string|null, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
   {let $idpDisplayName kind="text"}{call firebaseui.auth.soy2.element.idpName data="all" /}{/let}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-email-link-sign-in-linking">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}
+              {css('firebaseui-id-page-email-link-sign-in-linking')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <h2 class="firebaseui-subtitle">
+      <div class="{css('firebaseui-card-content')}">
+        <h2 class="{css('firebaseui-subtitle')}">
           {msg desc="Header of a page displayed when the user has signed in before with the provided
               email."}
             You already have an account
           {/msg}
         </h2>
-        <p class="firebaseui-text firebaseui-text-justify">
+        <p class="{css('firebaseui-text')} {css('firebaseui-text-justify')}">
           {msg desc="Message that reminds the user that they previously used a different method of
               sign-in for the current email. The user is expected to sign in with their existing
               sign-in provider and then connect the new provider to the same account. For example,
@@ -563,7 +563,7 @@
             <strong>{$idpDisplayName}</strong> account with <strong>{$email}</strong> by signing in
             with email link below.
           {/msg}
-        <p class="firebaseui-text firebaseui-text-justify">
+        <p class="{css('firebaseui-text')} {css('firebaseui-text-justify')}">
           {msg desc="Message that notifies the user that in order to connect their current sign-in
               provider (Facebook, Twitter, etc) with their email account, they need to open a link
               that was emailed to them on the same current device or browser."}
@@ -572,12 +572,12 @@
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.signInButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -592,14 +592,14 @@
   {@param? providerConfig: [providerId:string|null, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
   {let $idpDisplayName kind="text"}{call firebaseui.auth.soy2.element.idpName data="all" /}{/let}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-email-link-sign-in-linking-different-device">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}{sp}
+              {css('firebaseui-id-page-email-link-sign-in-linking-different-device')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text firebaseui-text-justify">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')} {css('firebaseui-text-justify')}">
           {msg desc="Message that explains to the user that the email link they clicked to sign in
               with was opened on a different device where they are not signed in with an identity
               provider such as Facebook, Twitter, etc. This makes it not possible to connect that
@@ -609,7 +609,7 @@
             account but have opened the link on a different device where you are not signed in.
           {/msg}
         </p>
-        <p class="firebaseui-text firebaseui-text-justify">
+        <p class="{css('firebaseui-text')} {css('firebaseui-text-justify')}">
           {msg desc="Message that gives the user two choices: connect an identity provider such as
               Facebook, Twitter, etc to their email account by opening a sign-in link on the same
               device they started the sign-in flow with or complete sign-in without connecting
@@ -620,12 +620,12 @@
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -641,27 +641,27 @@
   {@param? providerConfig: [providerId:string|null, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]} /** The IdP provider config. */
   {let $idpDisplayName kind="text"}{call firebaseui.auth.soy2.element.idpName data="all" /}{/let}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-federated-linking">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-federated-linking')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <h2 class="firebaseui-subtitle">
+      <div class="{css('firebaseui-card-content')}">
+        <h2 class="{css('firebaseui-subtitle')}">
           {msg desc="Header of a page displayed when the user has signed in before with the provided
               email."}
             You already have an account
           {/msg}
         </h2>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that reminds the user the previous sign-in status."}
             You’ve already used <strong>{$email}</strong>. Sign in with {$idpDisplayName} to
             continue.
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
               {msg desc="Label of a button that signs in a user with a federated identity provider
@@ -672,7 +672,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -685,22 +685,22 @@
  */
 {template .unsupportedProvider}
   {@param email: string}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container
-              firebaseui-id-page-unsupported-provider">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}{sp}
+              {css('firebaseui-id-page-unsupported-provider')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that asks the user to recover the password."}
             To continue sign in with <strong>{$email}</strong> on this device, you have to recover
             the password.
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton /}
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
@@ -711,7 +711,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -724,19 +724,19 @@
  */
 {template .passwordReset}
   {@param email: string} /** The email address of the account to reset password. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-reset">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-password-reset')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a page where the user can reset their password."}
             Reset your password
           {/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
+      <div class="{css('firebaseui-card-content')}">
         {msg desc="Tell the user the email of the account for which the password is being
             changed."}
-          <p class="firebaseui-text">
+          <p class="{css('firebaseui-text')}">
             for <strong>{$email}</strong>
           </p>
         {/msg}
@@ -748,8 +748,8 @@
           {/param}
         {/call}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.saveButton /}
         </div>
       </div>
@@ -763,23 +763,23 @@
  */
 {template .passwordResetSuccess}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-password-reset-success">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-password-reset-success')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a successful password change notice page"}Password changed{/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page that password reset succeeded."}
           You can now sign in with your new password
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -793,25 +793,25 @@
  */
 {template .passwordResetFailure}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-password-reset-failure">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-password-reset-failure')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a password reset failure notice page"}
           Try resetting your password again
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page that password reset failed."}
           Your request to reset your password has expired or the link has already been used
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -826,37 +826,37 @@
 {template .emailChangeRevokeSuccess}
   {@param email: string} /** The old email address of the account to reactivate. */
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-email-change-revoke-success">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-email-change-revoke-success')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a page notifying that an email change request has been revoked"}
             Updated email address
           {/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Detailed info of a notice page that an email change request has been revoked."}
             Your sign-in email address has been changed back to <strong>{$email}</strong>.
           {/msg}
         </p>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that explains to the user that they can reset their password if they
                suspect someone has accessed their account."}
             If you didn’t ask to change your sign-in email, it’s possible someone is trying to
             access your account and you should <a
-                class="firebaseui-link firebaseui-id-reset-password-link"
+                class="{css('firebaseui-link')} {css('firebaseui-id-reset-password-link')}"
                 href="javascript:void(0)">
               change your password right away
             </a>.
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
+      <div class="{css('firebaseui-card-actions')}">
         {if $allowContinue}
-          <div class="firebaseui-form-actions">
+          <div class="{css('firebaseui-form-actions')}">
             {call firebaseui.auth.soy2.element.continueButton /}
           </div>
         {/if}
@@ -871,28 +871,28 @@
  */
 {template .emailChangeRevokeFailure}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-email-change-revoke-failure">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-email-change-revoke-failure')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page notifying that an email change revocation request has failed"}
           Unable to update your email address
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
+    <div class="{css('firebaseui-card-content')}">
       {msg desc="Detailed info of a notice page that email change revocation has failed."}
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           There was a problem changing your sign-in email back.
         </p>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           If you try again and still can’t reset your email, try asking your administrator for help.
         </p>
       {/msg}
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -906,25 +906,25 @@
  */
 {template .emailVerificationSuccess}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-email-verification-success">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-email-verification-success')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page telling the user their email address has been verified."}
           Your email has been verified
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page that confirms user's email is verified"}
           You can now sign in with your new account
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -938,25 +938,25 @@
  */
 {template .emailVerificationFailure}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-email-verification-failure">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-email-verification-failure')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page telling the user that email verification has failed."}
           Try verifying your email again
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page that email verification failed."}
           Your request to verify your email has expired or the link has already been used
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -971,26 +971,26 @@
 {template .verifyAndChangeEmailSuccess}
   {@param email: string} /** The email address being verified and updated to. */
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-verify-and-change-email-success">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-verify-and-change-email-success')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page telling the user their email address has been verified and
             updated."}
           Your email has been verified and changed
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a notice page that the email has been verified and updated."}
           You can now sign in with your new email <strong>{$email}</strong>.
         {/msg}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -1004,28 +1004,28 @@
  */
 {template .verifyAndChangeEmailFailure}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-verify-and-change-email-failure">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-verify-and-change-email-failure')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page notifying that an email verification and
             update request has failed"}
           Try updating your email again
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
+    <div class="{css('firebaseui-card-content')}">
       {msg desc="Detailed info of a notice page that an email verification and update request has
           failed."}
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           Your request to verify and update your email has expired or the link has already been
           used.
         </p>
       {/msg}
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -1041,19 +1041,19 @@
   {@param factorId: string} /** The factor ID of the second factor being removed. */
   {@param? phoneNumber: string} /** The phone number of the phone second factor being removed. */
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-revert-second-factor-addition-success">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-revert-second-factor-addition-success')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of a page notifying that a second factor addition request has been
               revoked"}
             Removed second factor
           {/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {switch $factorId}
             {case 'phone'}
               {msg desc="Detailed info of a notice page that a phone second factor addition request
@@ -1068,21 +1068,21 @@
               {/msg}
           {/switch}
         </p>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that explains to the user that they can reset their password if they
               suspect someone has accessed their account."}
             If you don't recognize this device, someone might be trying to access your account.
             Consider <a
-                class="firebaseui-link firebaseui-id-reset-password-link"
+                class="{css('firebaseui-link')} {css('firebaseui-id-reset-password-link')}"
                 href="javascript:void(0)">
               changing your password right away
             </a>.
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
+      <div class="{css('firebaseui-card-actions')}">
         {if $allowContinue}
-          <div class="firebaseui-form-actions">
+          <div class="{css('firebaseui-form-actions')}">
             {call firebaseui.auth.soy2.element.continueButton /}
           </div>
         {/if}
@@ -1097,30 +1097,30 @@
  */
 {template .revertSecondFactorAdditionFailure}
   {@param? allowContinue: bool} /** Whether to show the continue button. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
       firebaseui-container firebaseui-id-page-revert-second-factor-addition-failure">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a page notifying that the second factor addition revocation request
             has failed"}
           Couldn't remove your second factor
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
+    <div class="{css('firebaseui-card-content')}">
       {msg desc="Detailed info of a notice page that the second factor addition revocation request
           has failed."}
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           Something went wrong removing your second factor.
         </p>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           Try removing it again. If that doesn't work, contact support for assistance.
         </p>
       {/msg}
     </div>
-    <div class="firebaseui-card-actions">
+    <div class="{css('firebaseui-card-actions')}">
       {if $allowContinue}
-        <div class="firebaseui-form-actions">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.continueButton /}
         </div>
       {/if}
@@ -1135,19 +1135,19 @@
 {template .recoverableError}
   {@param errorMessage: string} /** The detailed error message. */
   {@param? allowRetry: bool} /** Whether to show the retry button. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-recoverable-error">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-recoverable-error')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a notice page"}Error encountered{/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {$errorMessage}
       </p>
     </div>
-    <div class="firebaseui-card-actions">
-      <div class="firebaseui-form-actions">
+    <div class="{css('firebaseui-card-actions')}">
+      <div class="{css('firebaseui-form-actions')}">
         {if $allowRetry}
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
@@ -1168,14 +1168,14 @@
  */
 {template .unrecoverableError}
   {@param errorMessage: string} /** The detailed error message. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-unrecoverable-error">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-unrecoverable-error')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a notice page"}Error encountered{/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {$errorMessage}
       </p>
     </div>
@@ -1189,28 +1189,28 @@
 {template .emailMismatch}
   {@param userEmail: string} /** The email returned by the identity provider. */
   {@param pendingEmail: string} /** The email formerly used. */
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-email-mismatch">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-email-mismatch')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">{msg desc="Header of a sign-in page."}Sign in{/msg}</h1>
       </div>
-      <div class="firebaseui-card-content">
-        <h2 class="firebaseui-subtitle">
+      <div class="{css('firebaseui-card-content')}">
+        <h2 class="{css('firebaseui-subtitle')}">
           {msg desc="Message that asks the user if he wishes to continue signing in with the
                provided email or sign out from the identity provider such as Google or Facebook
                and try to sign in again with a different email."}
             Continue with {$userEmail}?
           {/msg}
         </h2>
-        <p class="firebaseui-text">
+        <p class="{css('firebaseui-text')}">
           {msg desc="Message that tells the user he originally wanted to sign in with a different
               email address."}
             You originally wanted to sign in with {$pendingEmail}
           {/msg}
         </p>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton /}
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
@@ -1222,7 +1222,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -1236,13 +1236,13 @@
 {template .providerSignIn}
   {@param providerConfigs: list<[providerId:string, providerName:string|null, fullLabel:string|null,
       buttonColor:string|null, iconUrl: string|null]>} /** List of supported IdP configs. */
-  <div class="firebaseui-container firebaseui-page-provider-sign-in{sp}
-      firebaseui-id-page-provider-sign-in firebaseui-use-spinner">
-    <div class="firebaseui-card-content">
+  <div class="{css('firebaseui-container')} {css('firebaseui-page-provider-sign-in')}{sp}
+      {css('firebaseui-id-page-provider-sign-in')} {css('firebaseui-use-spinner')}">
+    <div class="{css('firebaseui-card-content')}">
       <form onsubmit="return false;">
-        <ul class="firebaseui-idp-list">
+        <ul class="{css('firebaseui-idp-list')}">
           {for $providerConfig in $providerConfigs}
-            <li class="firebaseui-list-item">
+            <li class="{css('firebaseui-list-item')}">
               {call firebaseui.auth.soy2.element.idpButton}
                 {param providerConfig: $providerConfig /}
               {/call}
@@ -1251,7 +1251,7 @@
         </ul>
       </form>
     </div>
-    <div class="firebaseui-card-footer firebaseui-provider-sign-in-footer">
+    <div class="{css('firebaseui-card-footer')} {css('firebaseui-provider-sign-in-footer')}">
       {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
     </div>
   </div>
@@ -1266,24 +1266,24 @@
   {@param? enableVisibleRecaptcha: bool} /** Whether to enable the visible reCAPTCHA. */
   {@param? displayCancelButton: bool} /** Whether to display the cancel button. */
   {@param? displayFullTosPpMessage: bool} /** Whether to display the full message of ToS and PP. */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-phone-sign-in-start">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-phone-sign-in-start')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of the phone number sign-in page."}Enter your phone number{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <div class="firebaseui-relative-wrapper">
+      <div class="{css('firebaseui-card-content')}">
+        <div class="{css('firebaseui-relative-wrapper')}">
           {call firebaseui.auth.soy2.element.phoneNumber data="all" /}
           {if $enableVisibleRecaptcha}
             {call firebaseui.auth.soy2.element.recaptcha /}
           {/if}
         </div>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {if $displayCancelButton}
             {call firebaseui.auth.soy2.element.cancelButton /}
           {/if}
@@ -1297,7 +1297,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {if $displayFullTosPpMessage}
           {call firebaseui.auth.soy2.element.phoneTosPp data="all" /}
         {else}
@@ -1314,34 +1314,34 @@
  */
 {template .phoneSignInFinish}
   {@param? phoneNumber: string} /** The phone number to confirm */
-  <div class="mdl-card mdl-shadow--2dp{sp}
-      firebaseui-container firebaseui-id-page-phone-sign-in-finish">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')}{sp}
+      {css('firebaseui-container')} {css('firebaseui-id-page-phone-sign-in-finish')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of the phone number sign-in code verification page."}
             Verify your phone number{/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <p class="firebaseui-text">
+      <div class="{css('firebaseui-card-content')}">
+        <p class="{css('firebaseui-text')}">
           {msg desc="A link to edit the phone number that the verification code was sent to."}
             Enter the 6-digit code we sent to{sp}
-            <a class="firebaseui-link firebaseui-change-phone-number-link{sp}
-                      firebaseui-id-change-phone-number-link"
+            <a class="{css('firebaseui-link')} {css('firebaseui-change-phone-number-link')}{sp}
+                      {css('firebaseui-id-change-phone-number-link')}"
                href="javascript:void(0)">&lrm;{$phoneNumber}</a>
           {fallbackmsg desc="A link to edit the phone number that the verification code was sent
               to."}
             Enter the 6-digit code we sent to{sp}
-            <a class="firebaseui-link firebaseui-change-phone-number-link{sp}
-                      firebaseui-id-change-phone-number-link"
+            <a class="{css('firebaseui-link')} {css('firebaseui-change-phone-number-link')}{sp}
+                      {css('firebaseui-id-change-phone-number-link')}"
                href="javascript:void(0)">{$phoneNumber}</a>
           {/msg}
         </p>
         {call firebaseui.auth.soy2.element.phoneConfirmationCode /}
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.cancelButton /}
           {call firebaseui.auth.soy2.element.submitButton}
             {param label kind="text"}
@@ -1353,7 +1353,7 @@
           {/call}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.tosPpLink data="all" /}
       </div>
     </form>
@@ -1366,16 +1366,16 @@
  * Renders a sign out notice page.
  */
 {template .signOut}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-sign-out">
-    <div class="firebaseui-card-header">
-      <h1 class="firebaseui-title">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')} {css('firebaseui-id-page-sign-out')}">
+    <div class="{css('firebaseui-card-header')}">
+      <h1 class="{css('firebaseui-title')}">
         {msg desc="Header of a sign out notice page"}
           Sign Out
         {/msg}
       </h1>
     </div>
-    <div class="firebaseui-card-content">
-      <p class="firebaseui-text">
+    <div class="{css('firebaseui-card-content')}">
+      <p class="{css('firebaseui-text')}">
         {msg desc="Detailed info of a sign out notice page."}
           You are now successfully signed out.
         {/msg}
@@ -1391,12 +1391,12 @@
 {template .selectTenant}
   {@param tenantConfigs: list<[tenantId:string|null, fullLabel:string|null, displayName:string,
       buttonColor:string, iconUrl: string]>} /** List of tenant selection button configs. */
-  <div class="firebaseui-container firebaseui-page-select-tenant firebaseui-id-page-select-tenant">
-    <div class="firebaseui-card-content">
+  <div class="{css('firebaseui-container')} {css('firebaseui-page-select-tenant')} {css('firebaseui-id-page-select-tenant')}">
+    <div class="{css('firebaseui-card-content')}">
       <form onsubmit="return false;">
-        <ul class="firebaseui-tenant-list">
+        <ul class="{css('firebaseui-tenant-list')}">
           {for $tenantConfig in $tenantConfigs}
-            <li class="firebaseui-list-item">
+            <li class="{css('firebaseui-list-item')}">
               {call firebaseui.auth.soy2.element.tenantSelectionButton}
                 {param tenantConfig: $tenantConfig /}
               {/call}
@@ -1405,7 +1405,7 @@
         </ul>
       </form>
     </div>
-    <div class="firebaseui-card-footer firebaseui-provider-sign-in-footer">
+    <div class="{css('firebaseui-card-footer')} {css('firebaseui-provider-sign-in-footer')}">
       {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
     </div>
   </div>
@@ -1416,28 +1416,28 @@
  * Renders a provider match by email page.
  */
 {template .providerMatchByEmail}
-  <div class="mdl-card mdl-shadow--2dp firebaseui-container{sp}
-              firebaseui-id-page-provider-match-by-email">
+  <div class="{css('mdl-card')} {css('mdl-shadow--2dp')} {css('firebaseui-container')}{sp}
+              {css('firebaseui-id-page-provider-match-by-email')}">
     <form onsubmit="return false;">
-      <div class="firebaseui-card-header">
-        <h1 class="firebaseui-title">
+      <div class="{css('firebaseui-card-header')}">
+        <h1 class="{css('firebaseui-title')}">
           {msg desc="Header of the page requesting a user's email to provide the best
               matching sign-in methods associated with this email."}
             Sign in
           {/msg}
         </h1>
       </div>
-      <div class="firebaseui-card-content">
-        <div class="firebaseui-relative-wrapper">
+      <div class="{css('firebaseui-card-content')}">
+        <div class="{css('firebaseui-relative-wrapper')}">
           {call firebaseui.auth.soy2.element.email /}
         </div>
       </div>
-      <div class="firebaseui-card-actions">
-        <div class="firebaseui-form-actions">
+      <div class="{css('firebaseui-card-actions')}">
+        <div class="{css('firebaseui-form-actions')}">
           {call firebaseui.auth.soy2.element.submitButton /}
         </div>
       </div>
-      <div class="firebaseui-card-footer">
+      <div class="{css('firebaseui-card-footer')}">
         {call firebaseui.auth.soy2.element.fullMessageTosPp data="all" /}
       </div>
     </form>
