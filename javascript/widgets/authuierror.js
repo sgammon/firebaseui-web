@@ -29,20 +29,20 @@ class AuthUIError extends Error {
    */
   constructor(code, opt_message, opt_credential) {
     super();
-    /** @export */
-    this.code = AuthUIError.ERROR_CODE_PREFIX + code;
-    /** @export */
-    this.message = opt_message ||
-        AuthUIError.getDefaultErrorMessage_(this.code) || '';
-    /** @export */
-    this.credential = opt_credential || null;
+    /** @public */
+    this['code'] = AuthUIError.ERROR_CODE_PREFIX + code;
+    /** @public */
+    this['message'] = opt_message ||
+        AuthUIError.getDefaultErrorMessage_(this['code']) || '';
+    /** @public */
+    this['credential'] = opt_credential || null;
   }
 
   /** @return {!Object} The plain object form of the error. */
   toPlainObject() {
     return {
-      'code': this.code,
-      'message': this.message,
+      'code': this['code'],
+      'message': this['message'],
     };
   }
 
